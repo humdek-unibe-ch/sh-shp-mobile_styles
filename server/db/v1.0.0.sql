@@ -48,7 +48,12 @@ INSERT IGNORE INTO `styles_fields` (`id_styles`, `id_fields`, `default_value`, `
 -- add field `type` in style `openAppButton`
 INSERT IGNORE INTO `styles_fields` (`id_styles`, `id_fields`, `default_value`, `help`) VALUES (get_style_id('openAppButton'), get_field_id('type'), 'primary', 'The <a href="https://getbootstrap.com/docs/4.1/components/buttons/#examples" target="_blank">bootstrap type</a> of the button.');
 
--- Add new field `app_url` in style openAppButton
-INSERT IGNORE INTO `fields` (`id`, `name`, `id_type`, `display`) VALUES (NULL, 'app_url', get_field_type_id('text'), '0');
+-- Add new field `app_url_android` in style openAppButton
+INSERT IGNORE INTO `fields` (`id`, `name`, `id_type`, `display`) VALUES (NULL, 'app_url_android', get_field_type_id('text'), '0');
 INSERT IGNORE INTO `styles_fields` (`id_styles`, `id_fields`, `default_value`, `help`) 
-VALUES (get_style_id('openAppButton'), get_field_id('app_url'), '', 'Type app url. For `Android` type the the package name, ex `unibe.tpf.test`, for `iOS` you need the url scheme. More information [here](https://capacitorjs.com/docs/apis/app-launcher)');
+VALUES (get_style_id('openAppButton'), get_field_id('app_url_android'), '', 'Type app url. For `Android` type the the package name, ex `unibe.tpf.test`. More information [here](https://capacitorjs.com/docs/apis/app-launcher)');
+
+-- Add new field `app_url_ios` in style openAppButton
+INSERT IGNORE INTO `fields` (`id`, `name`, `id_type`, `display`) VALUES (NULL, 'app_url_ios', get_field_type_id('text'), '0');
+INSERT IGNORE INTO `styles_fields` (`id_styles`, `id_fields`, `default_value`, `help`) 
+VALUES (get_style_id('openAppButton'), get_field_id('app_url_ios'), '', 'Type app url. For `iOS` you need the url scheme. More information [here](https://capacitorjs.com/docs/apis/app-launcher)');
