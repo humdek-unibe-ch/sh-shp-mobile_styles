@@ -4,3 +4,4 @@
 
  - The mobile plugin that contains only mobile styles. 
  - add style `shortcutButton`
+ - add style `openAppButton`
